@@ -39,3 +39,25 @@ print(weatherReport)
 
 weatherReport = f"The temperature in {city} is {temp} degrees."
 print(weatherReport)
+
+weatherReport = "The temperature in {} is {} degrees.".format(city, temp)
+print(weatherReport)
+
+star = "*"
+print((star * 5 + "\n") * 5)
+
+print("apple" == "apple")
+print("apple" == "Apple")
+print("apple" == "orange")
+print("apple" != "orange")
+
+print()
+
+msg = "Hello"
+res = len(msg)
+print(res)
+
+
+
+
+

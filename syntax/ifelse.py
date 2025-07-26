@@ -14,13 +14,13 @@ if cpu_usage > 80 and memory > 80:
     print("System overloaded!")
 elif cpu_usage > 80 or memory > 80:
     print("System stressed!")
-    
+
 
 # Checking existence
 config = {"host": "localhost", "port": 8080}
 if "host" in config:
     print(f"Host: {config['host']}")
-    
+
 # Terenay operator
 status = "active" if cpu_usage < 80 else "stressed"
 

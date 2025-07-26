@@ -36,3 +36,11 @@ print(my_tuple)
 
 person = {'name': 'Alice', 'age': 22, 'city': 'London', 'gender': 'female'}
 print('Person:', person)
+print(person['name'])
+
+
+my_set = {1,2,3,5,6,1,3,2,77,33,44,66,77,88,44}
+print(my_set)
+
+res = my_set.append(11)
+print("Appended:", res)

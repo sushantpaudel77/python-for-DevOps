@@ -1,21 +1,21 @@
 # String creation and basic operations
 name = "DevOps Engineer"
-message = f"Hello, {name}!"  
-old_style = "Hello, {}!".format(name)  
+message = f"Hello, {name}!"  # f-string (preferred)
+old_style = "Hello, {}!".format(name)  # format method
 
 # String methods
 text = "  Python DevOps  "
-print(text.strip())           
-print(text.lower())          
-print(text.upper())           
-print(text.replace("Python", "Java"))  
+print(text.strip())           # Remove whitespace
+print(text.lower())           # Convert to lowercase
+print(text.upper())           # Convert to uppercase
+print(text.replace("Python", "Java"))  # Replace substring
 
 # String checking
 email = "admin@company.com"
-print(email.startswith("admin"))     
-print(email.endswith(".com"))        
-print("@" in email)                  
-print(email.isdigit())              
+print(email.startswith("admin"))     # True
+print(email.endswith(".com"))        # True
+print("@" in email)                  # True
+print(email.isdigit())               # False
 
 # String splitting and joining
 path = "/var/log/app.log"

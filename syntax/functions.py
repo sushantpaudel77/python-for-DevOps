@@ -47,3 +47,18 @@ def unreliable_function():
     if random.random() < 0.5:
         raise Exception("Random failure")
     return "Success"
+
+
+# Function to calculate the factorial of a number
+def factorial(n):
+    """
+    Calculate the factorial of a non-negative integer n.
+    Returns 1 for n=0.
+    """
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
+
+# Example usage
+print(f"Factorial of 5 is {factorial(5)}")

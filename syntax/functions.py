@@ -62,3 +62,20 @@ def factorial(n):
 
 # Example usage
 print(f"Factorial of 5 is {factorial(5)}")
+
+
+# Function to check if a number is prime
+def is_prime(n):
+    """
+    Check if a given number n is a prime number.
+    Returns True if n is prime, False otherwise.
+    """
+    if n <= 1:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+# Example usage
+print(f"Is 7 prime? {is_prime(7)}")

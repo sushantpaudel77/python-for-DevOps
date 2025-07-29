@@ -12,11 +12,26 @@ for i in range(1, 6):
 for i in range(0, 10, 2):
     print(f"Even: {i}")
 
+# New loop example 1: Looping through dictionary
+server_status = {"web1": "active", "web2": "inactive", "db1": "active"}
+for server, status in server_status.items():
+    print(f"{server} is {status}")
+
 # While loop
 count = 0
 while count < 5:
     print(f"Count: {count}")
     count += 1
+
+# New loop example 2: While loop with break condition
+attempts = 0
+max_attempts = 3
+while True:
+    print(f"Attempt {attempts + 1}")
+    attempts += 1
+    if attempts >= max_attempts:
+        print("Max attempts reached")
+        break
 
 # Enumerate (get index and value)
 services = ["nginx", "mysql", "redis"]

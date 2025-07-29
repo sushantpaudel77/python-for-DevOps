@@ -64,4 +64,14 @@ def restart_service(name, retries=3):
             return True
     return False
 
+# Function to simulate checking available ports (instead of prime number logic)
+def is_port_available(port):
+    """
+    Simulate checking if a given port is available.
+    (Replaces prime check with port check logic.)
+    """
+    reserved_ports = [22, 80, 443, 5432]
+    return port not in reserved_ports
 
+# Example usage
+print(f"Is port 8080 available? {is_port_available(8080)}")

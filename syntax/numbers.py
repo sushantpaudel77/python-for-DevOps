@@ -26,3 +26,13 @@ print(round(45.567, 2))  # 45.57
 x = 42
 print(isinstance(x, int))  # True
 print(type(x).__name__)  # 'int'
+
+# Absolute value and sign check
+temperature = -12
+print(abs(temperature))  # 12
+print(math.copysign(1, temperature))  # -1.0 (returns sign of value)
+
+# Random number generation
+import random
+print(random.randint(1, 100))  # Random integer between 1 and 100
+print(round(random.uniform(1.5, 5.5), 2))  # Random float between 1.5 and 5.5 rounded to 2 decimals

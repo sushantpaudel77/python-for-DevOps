@@ -6,10 +6,12 @@ def check_service_status(service_name):
 
 # Function with default parameters
 def connect_database(host="localhost", port=5432, timeout=30):
+    """Connect to a database with default host, port, and timeout."""
     return f"Connecting to {host}:{port} (timeout: {timeout}s)"
 
 # Function with *args and **kwargs
 def log_message(level, message, *tags, **metadata):
+    """Log messages with flexible tagging and metadata."""
     print(f"[{level}] {message}")
     print(f"Tags: {tags}")
     print(f"Metadata: {metadata}")
@@ -19,6 +21,7 @@ log_message("INFO", "Server started", "web", "production",
 
 # Return multiple values
 def get_system_info():
+    """Fetch system metrics: CPU, memory, and disk usage."""
     cpu = 45.2
     memory = 67.8
     disk = 30.1
@@ -33,6 +36,7 @@ squared = list(map(lambda x: x**2, [1, 2, 3, 4]))
 
 # Decorator example
 def retry_on_failure(func):
+    """Retry a function once if it fails."""
     def wrapper(*args, **kwargs):
         try:
             return func(*args, **kwargs)
@@ -43,39 +47,21 @@ def retry_on_failure(func):
 
 @retry_on_failure
 def unreliable_function():
+    """Simulate flaky function, like an unstable API call or service check."""
     import random
     if random.random() < 0.5:
         raise Exception("Random failure")
     return "Success"
 
-
-# Function to calculate the factorial of a number
-def factorial(n):
-    """
-    Calculate the factorial of a non-negative integer n.
-    Returns 1 for n=0.
-    """
-    result = 1
-    for i in range(1, n + 1):
-        result *= i
-    return result
-
-# Example usage
-print(f"Factorial of 5 is {factorial(5)}")
+# Function to simulate retry logic for restarting failed services
+def restart_service(name, retries=3):
+    """Restart a failed service with retry logic."""
+    for attempt in range(1, retries + 1):
+        print(f"Attempt {attempt}: Restarting {name}...")
+        # Simulate restart attempt
+        if attempt == retries:
+            print(f"{name} restarted successfully.")
+            return True
+    return False
 
 
-# Function to check if a number is prime
-def is_prime(n):
-    """
-    Check if a given number n is a prime number.
-    Returns True if n is prime, False otherwise.
-    """
-    if n <= 1:
-        return False
-    for i in range(2, int(n ** 0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
-
-# Example usage
-print(f"Is 7 prime? {is_prime(7)}")

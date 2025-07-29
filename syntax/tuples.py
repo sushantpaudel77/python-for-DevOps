@@ -21,3 +21,14 @@ print(web_server.ip)
 # Tuple vs List choice
 # Use tuple for: coordinates, database records, function returns
 # Use list for: dynamic collections that change
+
+# Tuple as dictionary key (hashable)
+location = {(40.7128, -74.0060): "New York", (34.0522, -118.2437): "Los Angeles"}
+print(location[(40.7128, -74.0060)])  # Output: New York
+
+# Returning multiple values from a function
+def get_user():
+    return ("sushant", 25)
+
+username, age = get_user()
+print(f"User: {username}, Age: {age}")

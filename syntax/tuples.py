@@ -32,3 +32,23 @@ def get_user():
 
 username, age = get_user()
 print(f"User: {username}, Age: {age}")
+
+# Employee data tuple (new example)
+employee_data = ("John Doe", "Software Engineer", 75000, "Engineering", True)
+emp_name, position, salary, department, is_active = employee_data
+print(f"Employee: {emp_name}")
+print(f"Position: {position} in {department}")
+print(f"Salary: ${salary:,}")
+print(f"Status: {'Active' if is_active else 'Inactive'}")
+
+# Nested tuple for storing RGB color values
+colors = (
+    ("Red", (255, 0, 0)),
+    ("Green", (0, 255, 0)),
+    ("Blue", (0, 0, 255)),
+    ("Purple", (128, 0, 128))
+)
+
+for color_name, rgb_values in colors:
+    r, g, b = rgb_values
+    print(f"{color_name}: RGB({r}, {g}, {b})")

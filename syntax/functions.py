@@ -75,3 +75,12 @@ def is_port_available(port):
 
 # Example usage
 print(f"Is port 8080 available? {is_port_available(8080)}")
+
+def get_uptime():
+    """Return system uptime in seconds (Linux only)."""
+    with open("/proc/uptime") as f:
+        uptime = float(f.readline().split()[0])
+    return uptime
+
+# Example usage
+print(f"System uptime: {get_uptime()} seconds")

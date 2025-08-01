@@ -28,3 +28,15 @@ server:
   host: localhost
   port: 8080
 """
+
+# Additional: Count and find substring
+log_line = "ERROR: Disk space low"
+error_count = log_line.count("ERROR")
+print(f"Number of 'ERROR' in log: {error_count}")
+
+pos = log_line.find("Disk")
+print(f"Position of 'Disk': {pos}")
+
+# Additional: String formatting with padding
+env = "prod"
+print(env.center(10, "-"))  # Output: ---prod---

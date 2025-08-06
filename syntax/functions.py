@@ -1,4 +1,4 @@
-# Basic function
+# basic function
 def check_service_status(service_name):
     """Check if a service is running."""
     print(f"Checking {service_name}...")
@@ -73,6 +73,7 @@ def is_port_available(port):
     reserved_ports = [22, 80, 443, 5432]
     return port not in reserved_ports
 
+
 # Example usage
 print(f"Is port 8080 available? {is_port_available(8080)}")
 
@@ -84,3 +85,5 @@ def get_uptime():
 
 # Example usage
 print(f"System uptime: {get_uptime()} seconds")
+
+

@@ -1,3 +1,5 @@
 .env
 .vscode/
 .venv
+.ipyn
+.ipynb_checkpoints

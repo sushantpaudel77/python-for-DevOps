@@ -46,3 +46,10 @@ pipeline_step = ("Build", {"tool": "Maven", "timeout": 300, "retries": 2})
 step_name, step_config = pipeline_step
 print(f"Step: {step_name}")
 print(f"Tool: {step_config['tool']}, Timeout: {step_config['timeout']}s, Retries: {step_config['retries']}")
+
+# Tuple representing an infrastructure monitoring alert
+alert_info = ("CPU Usage High", "Critical", False)
+alert_name, severity, is_resolved = alert_info
+print(f"Alert: {alert_name}")
+print(f"Severity: {severity}")
+print(f"Resolved: {'Yes' if is_resolved else 'No'}")

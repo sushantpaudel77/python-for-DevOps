@@ -53,3 +53,21 @@ alert_name, severity, is_resolved = alert_info
 print(f"Alert: {alert_name}")
 print(f"Severity: {severity}")
 print(f"Resolved: {'Yes' if is_resolved else 'No'}")
+
+
+# Tuple representing a Kubernetes Pod status
+pod_status = ("frontend-pod-1", "Running", "2025-08-14T10:32:00Z")
+pod_name, status, last_restart = pod_status
+print(f"Pod: {pod_name} | Status: {status} | Last Restart: {last_restart}")
+
+# Tuple for AWS EC2 instance details
+ec2_instance = ("i-0abcd1234ef567890", "t3.medium", "us-east-1a", "running")
+instance_id, instance_type, az, ec2_state = ec2_instance
+print(f"EC2 ID: {instance_id}, Type: {instance_type}, AZ: {az}, State: {ec2_state}")
+
+# Tuple for Docker image build info
+docker_image = ("app-service", "v1.2.3", "dockerhub.com/org/app-service:v1.2.3")
+image_name, version, repo_url = docker_image
+print(f"Image: {image_name}:{version} ({repo_url})")
+
+

@@ -70,4 +70,38 @@ docker_image = ("app-service", "v1.2.3", "dockerhub.com/org/app-service:v1.2.3")
 image_name, version, repo_url = docker_image
 print(f"Image: {image_name}:{version} ({repo_url})")
 
+# Tuple for CI job result
+ci_job = ("Unit Tests", "Passed", 132)  # 132 seconds
+job_name, job_result, duration = ci_job
+print(f"Job: {job_name} | Result: {job_result} | Duration: {duration}s")
+
+# Tuple for Terraform resource creation
+terraform_resource = ("aws_s3_bucket", "prod-logs", True)
+resource_type, resource_name, creation_success = terraform_resource
+print(f"Terraform: {resource_type} '{resource_name}' created: {creation_success}")
+
+# Tuple for Git commit info
+git_commit = ("a1b2c3d", "Fix memory leak in API handler", "Sushant", "2025-08-13")
+commit_hash, commit_msg, author, date = git_commit
+print(f"Commit {commit_hash} by {author} on {date}: {commit_msg}")
+
+# Tuple for Jenkins pipeline stage
+jenkins_stage = ("Deploy to Staging", {"parallel": False, "timeout": 600})
+stage_name, stage_config = jenkins_stage
+print(f"Stage: {stage_name} | Timeout: {stage_config['timeout']}s | Parallel: {stage_config['parallel']}")
+
+# Tuple for Ansible playbook result
+ansible_play = ("webservers.yml", "Completed", 12)  # 12 tasks executed
+playbook, play_status, tasks_executed = ansible_play
+print(f"Playbook: {playbook} | Status: {play_status} | Tasks: {tasks_executed}")
+
+# Tuple for monitoring metric threshold
+metric_alert = ("Memory Usage", 85, "Warning")  # 85% usage
+metric_name, current_value, severity = metric_alert
+print(f"Metric: {metric_name} | Current: {current_value}% | Severity: {severity}")
+
+# Tuple for API endpoint uptime check
+api_check = ("GET /health", True, 0.032)  # 32ms response
+endpoint, is_healthy, response_time = api_check
+print(f"Endpoint: {endpoint} | Healthy: {is_healthy} | Response: {response_time*1000:.1f}ms")
 

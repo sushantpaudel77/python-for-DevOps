@@ -11,6 +11,9 @@ print(newCloud1.name)
 newCloud2 = Cloud("AWS")
 print(newCloud2.name)
 
+newCloud2 = Cloud("AZURE")
+print(newCloud2.name)
+
 # class Car:
 #     color = "Blue"
 #     brand = "Mercedes"

@@ -17,3 +17,17 @@ print(provider2.info())
 provider3 = CloudProvider("Azure", "asia-east")
 print(provider3.info())
 
+# Another example: Car class
+class Car:
+    def __init__(self, color, brand):
+        self.color = color
+        self.brand = brand
+
+    def description(self):
+        return f"{self.color} {self.brand}"
+
+car1 = Car("Blue", "Mercedes")
+print(car1.description())
+
+car2 = Car("Red", "Toyota")
+print(car2.description())

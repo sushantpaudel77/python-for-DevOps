@@ -1,23 +1,19 @@
-class Cloud:
-    # name = "google cloud"
-    def __init__(self, fullname):
-        # print(self)
-        self.name = fullname
-        print("adding new student in databases..")
+class CloudProvider:
+    def __init__(self, name, region):
+        self.name = name
+        self.region = region
+        print(f"Provisioning {self.name} in {self.region} region...")
 
-newCloud1 = Cloud("Google Cloud")
-print(newCloud1.name)
+    def info(self):
+        return f"{self.name} operates in {self.region}"
 
-newCloud2 = Cloud("AWS")
-print(newCloud2.name)
+# Creating instances of CloudProvider
+provider1 = CloudProvider("Google Cloud", "us-central1")
+print(provider1.info())
 
-newCloud2 = Cloud("AZURE")
-print(newCloud2.name)
+provider2 = CloudProvider("AWS", "eu-west-1")
+print(provider2.info())
 
-# class Car:
-#     color = "Blue"
-#     brand = "Mercedes"
+provider3 = CloudProvider("Azure", "asia-east")
+print(provider3.info())
 
-# car1 = Car()
-# print(car1.color)
-# print(car1.brand)
